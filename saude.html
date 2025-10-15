@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental - ODS 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="saude.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">❤️</div>
+                <span class="logo-text">ODS em Ação</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">✨</span>
+                    <span>Início</span>
+                </a>
+                <a href="genero.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span>Igualdade de Gênero</span>
+                </a>
+                <a href="saude.html" class="nav-link active">
+                    <span class="nav-icon">💜</span>
+                    <span>Saúde Mental</span>
+                </a>
+                <a href="historia.html" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    <span>Histórias</span>
+                </a>
+                <a href="quiz.html" class="nav-link">
+                    <span class="nav-icon">🏆</span>
+                    <span>Quiz</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="page-content">
+        <div class="container">
+  
+            <div class="page-hero">
+                <div class="hero-icon-box hero-icon-blue">🧠</div>
+                <div class="hero-badge-small hero-badge-blue">ODS 3 - Saúde e Bem-estar</div>
+                <h1 class="page-title gradient-blue">Saúde Mental</h1>
+                <p class="page-subtitle">
+                    Cuidar da mente é tão importante quanto cuidar do corpo
+                </p>
+            </div>
+
+ 
+            <div class="mood-tracker">
+                <h2 class="text-center mb-6">Como você está se sentindo hoje?</h2>
+                
+        
+                <div class="emotions-grid">
+                    <button class="emotion-btn" data-emotion="Feliz" onclick="selectEmotion(this)">
+                        <div class="emotion-emoji">😊</div>
+                        <div class="emotion-label">Feliz</div>
+                    </button>
+                    <button class="emotion-btn" data-emotion="Calmo" onclick="selectEmotion(this)">
+                        <div class="emotion-emoji">😌</div>
+                        <div class="emotion-label">Calmo</div>
+                    </button>
+                    <button class="emotion-btn" data-emotion="Triste" onclick="selectEmotion(this)">
+                        <div class="emotion-emoji">😔</div>
+                        <div class="emotion-label">Triste</div>
+                    </button>
+                    <button class="emotion-btn" data-emotion="Ansioso" onclick="selectEmotion(this)">
+                        <div class="emotion-emoji">😰</div>
+                        <div class="emotion-label">Ansioso</div>
+                    </button>
+                    <button class="emotion-btn" data-emotion="Irritado" onclick="selectEmotion(this)">
+                        <div class="emotion-emoji">😡</div>
+                        <div class="emotion-label">Irritado</div>
+                    </button>
+                    <button class="emotion-btn" data-emotion="Cansado" onclick="selectEmotion(this)">
+                        <div class="emotion-emoji">😴</div>
+                        <div class="emotion-label">Cansado</div>
+                    </button>
+                </div>
+
+                
+                <div class="emotion-feedback" id="emotionFeedback"></div>
+
+                <!-- Mood Slider -->
+                <div class="mood-slider-container">
+                    <label>Intensidade: <span id="moodValue">50</span>%</label>
+                    <input type="range" id="moodSlider" min="0" max="100" value="50" class="mood-slider">
+                    <p class="slider-feedback" id="sliderFeedback">Pequenos passos fazem diferença. Continue cuidando de si.</p>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" onclick="switchTab('info')">Informações</button>
+                    <button class="tab-btn" onclick="switchTab('dicas')">Dicas Práticas</button>
+                    <button class="tab-btn" onclick="switchTab('ajuda')">Buscar Ajuda</button>
+                </div>
+
+                <!-- Info Tab -->
+                <div class="tab-panel active" id="tab-info">
+                    <div class="grid-2">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" 
+                                 alt="Saúde Mental"
+                                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h3>O que é Saúde Mental?</h3>
+                            <p style="color: #4b5563;">
+                                Saúde mental é um estado de bem-estar em que o indivíduo realiza suas próprias 
+                                habilidades, pode lidar com os estresses normais da vida, trabalhar produtivamente 
+                                e contribuir para sua comunidade.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="mb-4">📊 Números que Importam</h3>
+                            <div class="stats-list">
+                                <div class="stat-item stat-purple">
+                                    <div class="stat-number">1 em 4</div>
+                                    <p>pessoas terá algum transtorno mental na vida</p>
+                                </div>
+                                <div class="stat-item stat-blue">
+                                    <div class="stat-number">264 milhões</div>
+                                    <p>de pessoas vivem com depressão no mundo</p>
+                                </div>
+                                <div class="stat-item stat-pink">
+                                    <div class="stat-number">800 mil</div>
+                                    <p>mortes por suicídio anualmente (OMS)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <h2 class="mb-6">Sinais de Alerta</h2>
+                        <div class="grid-2">
+                            <div>
+                                <h3 class="alert-title alert-purple">Mudanças no Comportamento:</h3>
+                                <ul class="alert-list">
+                                    <li>• Isolamento social prolongado</li>
+                                    <li>• Perda de interesse em atividades</li>
+                                    <li>• Mudanças drásticas de humor</li>
+                                    <li>• Dificuldade de concentração</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="alert-title alert-blue">Sintomas Físicos:</h3>
+                                <ul class="alert-list">
+                                    <li>• Alterações no sono ou apetite</li>
+                                    <li>• Fadiga constante sem causa</li>
+                                    <li>• Dores sem explicação médica</li>
+                                    <li>• Pensamentos recorrentes sobre morte</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="warning-box">
+                            ⚠️ <strong>Importante:</strong> Se você ou alguém que conhece apresenta esses sinais, 
+                            busque ajuda profissional. Quanto antes, melhor.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dicas Tab -->
+                <div class="tab-panel" id="tab-dicas">
+                    <div class="tips-grid">
+                        <div class="tip-card tip-yellow">
+                            <div class="tip-icon">☀️</div>
+                            <h3>Pratique Gratidão</h3>
+                            <p>Anote 3 coisas pelas quais você é grato todos os dias</p>
+                        </div>
+                        <div class="tip-card tip-green">
+                            <div class="tip-icon">🏃</div>
+                            <h3>Exercite-se</h3>
+                            <p>30 minutos de atividade física melhoram o humor</p>
+                        </div>
+                        <div class="tip-card tip-purple">
+                            <div class="tip-icon">🌙</div>
+                            <h3>Durma Bem</h3>
+                            <p>7-9 horas de sono são essenciais para a saúde mental</p>
+                        </div>
+                        <div class="tip-card tip-pink">
+                            <div class="tip-icon">❤️</div>
+                            <h3>Conecte-se</h3>
+                            <p>Mantenha contato com amigos e familiares</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <h2 class="mb-6">5 Passos para o Bem-estar Diário</h2>
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h4>Conecte-se</h4>
+                                    <p>Converse com alguém hoje</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h4>Seja Ativo</h4>
+                                    <p>Movimente seu corpo por 20 minutos</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h4>Observe</h4>
+                                    <p>Pratique mindfulness por 5 minutos</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div>
+                                    <h4>Aprenda</h4>
+                                    <p>Descubra algo novo</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">5</div>
+                                <div>
+                                    <h4>Dê</h4>
+                                    <p>Faça algo gentil por alguém</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ajuda Tab -->
+                <div class="tab-panel" id="tab-ajuda">
+                    <div class="card mb-4">
+                        <h2 class="mb-6">Onde Buscar Ajuda</h2>
+                        <div class="resources-list">
+                            <div class="resource-item">
+                                <div class="resource-icon">📞</div>
+                                <div class="resource-content">
+                                    <h3>CVV - Centro de Valorização da Vida</h3>
+                                    <p>Apoio emocional e prevenção ao suicídio, 24h</p>
+                                    <div class="resource-number">188</div>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <div class="resource-icon">🏥</div>
+                                <div class="resource-content">
+                                    <h3>CAPS - Centro de Atenção Psicossocial</h3>
+                                    <p>Atendimento em saúde mental pelo SUS</p>
+                                    <div class="resource-number">136</div>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <div class="resource-icon">🗺️</div>
+                                <div class="resource-content">
+                                    <h3>Mapa da Saúde Mental</h3>
+                                    <p>Encontre profissionais e serviços gratuitos</p>
+                                    <div class="resource-number">mapasaudemental.com.br</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CVV Card -->
+                    <div class="cvv-card">
+                        <div class="cvv-header">
+                            <div class="cvv-icon">💜</div>
+                            <div>
+                                <h3>Precisa Conversar?</h3>
+                                <p>Você não está sozinho(a)</p>
+                            </div>
+                        </div>
+                        <p>
+                            O CVV (Centro de Valorização da Vida) oferece apoio emocional gratuito 
+                            e sigiloso, 24 horas por dia, todos os dias.
+                        </p>
+                        <div class="cvv-buttons">
+                            <a href="tel:188" class="btn btn-secondary">📞 Ligar 188</a>
+                            <a href="https://www.cvv.org.br" target="_blank" class="btn btn-outline-white">💬 Chat Online</a>
+                        </div>
+                    </div>
+
+                    <!-- Emergency -->
+                    <div class="warning-box warning-box-red">
+                        <div style="display: flex; gap: 1rem;">
+                            <div style="font-size: 2rem;">⚠️</div>
+                            <div>
+                                <h4>Emergência</h4>
+                                <p>Se você ou alguém está em risco imediato de se machucar:</p>
+                                <ul style="margin-top: 0.5rem;">
+                                    <li>• Ligue 192 (SAMU) ou 190 (Polícia)</li>
+                                    <li>• Vá ao pronto-socorro mais próximo</li>
+                                    <li>• Não deixe a pessoa sozinha</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="quote-card">
+                <div class="quote-icon">😊</div>
+                <blockquote>
+                    "Saúde mental não é um destino, mas um processo. Não se trata de ser feliz sempre, 
+                    mas de ter ferramentas para lidar com os altos e baixos da vida."
+                </blockquote>
+                <p class="quote-author">- Organização Mundial da Saúde</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="saude.js"></script>
+</body>
+</html>

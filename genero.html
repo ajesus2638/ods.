@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igualdade de Gênero - ODS 5</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="genero.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">❤️</div>
+                <span class="logo-text">ODS em Ação</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">✨</span>
+                    <span>Início</span>
+                </a>
+                <a href="genero.html" class="nav-link active">
+                    <span class="nav-icon">👥</span>
+                    <span>Igualdade de Gênero</span>
+                </a>
+                <a href="saude.html" class="nav-link">
+                    <span class="nav-icon">💜</span>
+                    <span>Saúde Mental</span>
+                </a>
+                <a href="historia.html" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    <span>Histórias</span>
+                </a>
+                <a href="quiz.html" class="nav-link">
+                    <span class="nav-icon">🏆</span>
+                    <span>Quiz</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="container">
+            <!-- Hero -->
+            <div class="page-hero">
+                <div class="hero-icon-box">👥</div>
+                <div class="hero-badge-small">ODS 5</div>
+                <h1 class="page-title gradient-purple">Igualdade de Gênero</h1>
+                <p class="page-subtitle">
+                    Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas
+                </p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Mulheres em cargos de liderança</span>
+                        <span class="stat-target">Meta: 50%</span>
+                    </div>
+                    <div class="stat-value">28%</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 28%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Diferença salarial de gênero</span>
+                        <span class="stat-target">Meta: 0%</span>
+                    </div>
+                    <div class="stat-value">20%</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress stat-progress-pink" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Acesso à educação secundária</span>
+                        <span class="stat-target">Meta: 100%</span>
+                    </div>
+                    <div class="stat-value">89%</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress stat-progress-blue" style="width: 89%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" onclick="switchTab('visao')">Visão Geral</button>
+                    <button class="tab-btn" onclick="switchTab('desafios')">Desafios</button>
+                    <button class="tab-btn" onclick="switchTab('solucoes')">Soluções</button>
+                </div>
+
+                <!-- Visão Geral Tab -->
+                <div class="tab-panel active" id="tab-visao">
+                    <!-- Image Section -->
+                    <div class="info-card-grid">
+                        <div class="info-card-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Mulheres em liderança">
+                        </div>
+                        <div class="info-card-content">
+                            <h2>Por que é importante?</h2>
+                            <p>
+                                A igualdade de gênero não é apenas um direito humano fundamental, mas também um 
+                                alicerce necessário para um mundo pacífico, próspero e sustentável.
+                            </p>
+                            <p>
+                                Garantir às mulheres e meninas igualdade no acesso à educação, cuidados de saúde, 
+                                trabalho digno e representação nos processos políticos e econômicos impulsionará 
+                                economias sustentáveis e beneficiará sociedades e a humanidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Goals -->
+                    <h2 class="section-title">Metas Principais</h2>
+                    <div class="goals-grid">
+                        <div class="goal-card" onclick="toggleGoalDetails(this)">
+                            <div class="goal-header">
+                                <div class="goal-icon">⚠️</div>
+                                <div class="goal-info">
+                                    <h3>Fim da Discriminação</h3>
+                                    <p>Eliminar todas as formas de discriminação contra mulheres e meninas</p>
+                                </div>
+                            </div>
+                            <div class="goal-actions" style="display: none;">
+                                <p class="actions-title">O que você pode fazer:</p>
+                                <ul>
+                                    <li>✓ Denunciar casos de discriminação</li>
+                                    <li>✓ Apoiar políticas de igualdade</li>
+                                    <li>✓ Educar sobre direitos das mulheres</li>
+                                </ul>
+                            </div>
+                            <button class="goal-toggle">Ver ações</button>
+                        </div>
+
+                        <div class="goal-card" onclick="toggleGoalDetails(this)">
+                            <div class="goal-header">
+                                <div class="goal-icon">👥</div>
+                                <div class="goal-info">
+                                    <h3>Eliminação da Violência</h3>
+                                    <p>Acabar com todas as formas de violência contra mulheres</p>
+                                </div>
+                            </div>
+                            <div class="goal-actions" style="display: none;">
+                                <p class="actions-title">O que você pode fazer:</p>
+                                <ul>
+                                    <li>✓ Ligar 180 para denunciar</li>
+                                    <li>✓ Apoiar vítimas de violência</li>
+                                    <li>✓ Promover conscientização</li>
+                                </ul>
+                            </div>
+                            <button class="goal-toggle">Ver ações</button>
+                        </div>
+
+                        <div class="goal-card" onclick="toggleGoalDetails(this)">
+                            <div class="goal-header">
+                                <div class="goal-icon">🏆</div>
+                                <div class="goal-info">
+                                    <h3>Participação e Liderança</h3>
+                                    <p>Garantir participação plena e oportunidades iguais de liderança</p>
+                                </div>
+                            </div>
+                            <div class="goal-actions" style="display: none;">
+                                <p class="actions-title">O que você pode fazer:</p>
+                                <ul>
+                                    <li>✓ Apoiar candidatas mulheres</li>
+                                    <li>✓ Criar espaços inclusivos</li>
+                                    <li>✓ Mentorar mulheres jovens</li>
+                                </ul>
+                            </div>
+                            <button class="goal-toggle">Ver ações</button>
+                        </div>
+
+                        <div class="goal-card" onclick="toggleGoalDetails(this)">
+                            <div class="goal-header">
+                                <div class="goal-icon">📈</div>
+                                <div class="goal-info">
+                                    <h3>Direitos Reprodutivos</h3>
+                                    <p>Acesso universal à saúde sexual e reprodutiva</p>
+                                </div>
+                            </div>
+                            <div class="goal-actions" style="display: none;">
+                                <p class="actions-title">O que você pode fazer:</p>
+                                <ul>
+                                    <li>✓ Defender direitos reprodutivos</li>
+                                    <li>✓ Apoiar educação sexual</li>
+                                    <li>✓ Garantir acesso a contraceptivos</li>
+                                </ul>
+                            </div>
+                            <button class="goal-toggle">Ver ações</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desafios Tab -->
+                <div class="tab-panel" id="tab-desafios">
+                    <div class="card">
+                        <h2 class="mb-6">Principais Desafios</h2>
+                        <div class="challenges-list">
+                            <div class="challenge-item">
+                                <div class="challenge-number challenge-red">1</div>
+                                <div>
+                                    <h3>Violência de Gênero</h3>
+                                    <p>1 em cada 3 mulheres já sofreu violência física ou sexual. A violência doméstica continua sendo uma das violações de direitos humanos mais persistentes.</p>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-number challenge-orange">2</div>
+                                <div>
+                                    <h3>Desigualdade Salarial</h3>
+                                    <p>Mulheres ainda ganham em média 20% menos que homens para o mesmo trabalho. A diferença é ainda maior para mulheres negras e indígenas.</p>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-number challenge-yellow">3</div>
+                                <div>
+                                    <h3>Sub-representação Política</h3>
+                                    <p>Mulheres ocupam apenas 26% dos assentos parlamentares no mundo. A representação em cargos executivos é ainda menor.</p>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-number challenge-purple">4</div>
+                                <div>
+                                    <h3>Trabalho Não Remunerado</h3>
+                                    <p>Mulheres realizam 2,5 vezes mais trabalho doméstico e de cuidado não remunerado que homens, limitando suas oportunidades econômicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soluções Tab -->
+                <div class="tab-panel" id="tab-solucoes">
+                    <div class="solutions-grid">
+                        <div class="solution-card solution-purple">
+                            <div class="solution-icon">📚</div>
+                            <h3>Educação e Conscientização</h3>
+                            <ul>
+                                <li>• Promover educação de qualidade para meninas</li>
+                                <li>• Combater estereótipos de gênero</li>
+                                <li>• Educar sobre direitos das mulheres</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-card solution-blue">
+                            <div class="solution-icon">🏆</div>
+                            <h3>Empoderamento Econômico</h3>
+                            <ul>
+                                <li>• Apoiar empreendedorismo feminino</li>
+                                <li>• Garantir igualdade salarial</li>
+                                <li>• Criar oportunidades de liderança</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-card solution-pink">
+                            <div class="solution-icon">👥</div>
+                            <h3>Políticas Públicas</h3>
+                            <ul>
+                                <li>• Implementar leis de proteção</li>
+                                <li>• Promover cotas de representação</li>
+                                <li>• Apoiar licença parental igualitária</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-card solution-green">
+                            <div class="solution-icon">📈</div>
+                            <h3>Mudança Cultural</h3>
+                            <ul>
+                                <li>• Engajar homens e meninos</li>
+                                <li>• Desconstruir masculinidades tóxicas</li>
+                                <li>• Promover cultura de respeito</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="emergency-card">
+                <div class="emergency-header">
+                    <div class="emergency-icon">⚠️</div>
+                    <div>
+                        <h3>Precisa de Ajuda?</h3>
+                        <p>Ligue 180 - Central de Atendimento à Mulher</p>
+                    </div>
+                </div>
+                <p>
+                    Se você ou alguém que conhece está em situação de violência, denuncie. 
+                    O serviço é gratuito e funciona 24 horas.
+                </p>
+                <a href="tel:180" class="btn btn-secondary">
+                    📞 Ligar para 180
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="genero.js"></script>
+</body>
+</html>

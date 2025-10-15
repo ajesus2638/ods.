@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - ODS em Ação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">❤️</div>
+                <span class="logo-text">ODS em Ação</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">✨</span>
+                    <span>Início</span>
+                </a>
+                <a href="genero.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span>Igualdade de Gênero</span>
+                </a>
+                <a href="saude.html" class="nav-link">
+                    <span class="nav-icon">💜</span>
+                    <span>Saúde Mental</span>
+                </a>
+                <a href="historia.html" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    <span>Histórias</span>
+                </a>
+                <a href="quiz.html" class="nav-link active">
+                    <span class="nav-icon">🏆</span>
+                    <span>Quiz</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="page-content">
+        <div class="container">
+            <div class="quiz-container" id="quizContainer">
+                <!-- Quiz Header -->
+                <div class="quiz-header">
+                    <div>
+                        <h1 class="quiz-title">Quiz Interativo</h1>
+                        <p class="quiz-subtitle">Teste seus conhecimentos!</p>
+                    </div>
+                    <div class="score-display">
+                        <div class="score-label">Pontuação</div>
+                        <div class="score-value" id="scoreValue">0/0</div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="quiz-progress">
+                    <div class="progress-info">
+                        <span id="questionNumber">Questão 1 de 6</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="quizProgressBar"></div>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="question-card" id="questionCard">
+                    <div class="question-category" id="questionCategory"></div>
+                    <h2 class="question-text" id="questionText"></h2>
+                    <div class="options-container" id="optionsContainer"></div>
+                    <div class="explanation" id="explanation" style="display: none;"></div>
+                </div>
+
+                <!-- Navigation -->
+                <button class="btn btn-primary btn-full" id="nextBtn" style="display: none;">
+                    Próxima Questão →
+                </button>
+                <p class="quiz-hint" id="quizHint">Selecione uma resposta para continuar</p>
+
+                <!-- Results -->
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <div class="results-icon">🏆</div>
+                    <h2>Quiz Concluído!</h2>
+                    <div class="results-score" id="finalScore">0/6</div>
+                    <p class="results-message" id="resultsMessage"></p>
+                    <div class="results-feedback" id="resultsFeedback"></div>
+                    <div class="results-buttons">
+                        <button class="btn btn-primary" onclick="restartQuiz()">
+                            🔄 Refazer Quiz
+                        </button>
+                        <button class="btn btn-outline" onclick="shareScore()">
+                            📤 Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

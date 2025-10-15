@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórias Inspiradoras - ODS em Ação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">❤️</div>
+                <span class="logo-text">ODS em Ação</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">✨</span>
+                    <span>Início</span>
+                </a>
+                <a href="genero.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span>Igualdade de Gênero</span>
+                </a>
+                <a href="saude.html" class="nav-link">
+                    <span class="nav-icon">💜</span>
+                    <span>Saúde Mental</span>
+                </a>
+                <a href="historia.html" class="nav-link active">
+                    <span class="nav-icon">📖</span>
+                    <span>Histórias</span>
+                </a>
+                <a href="quiz.html" class="nav-link">
+                    <span class="nav-icon">🏆</span>
+                    <span>Quiz</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="container">
+            <!-- Hero -->
+            <div class="page-hero text-center">
+                <div class="hero-sparkle">✨</div>
+                <h1 class="page-title gradient-rainbow">Histórias que Inspiram</h1>
+                <p class="page-subtitle">
+                    Conheça pessoas reais que estão fazendo a diferença e transformando vidas através 
+                    da igualdade de gênero e cuidado com a saúde mental
+                </p>
+            </div>
+
+         
+            <div class="stories-grid" id="storiesGrid">
+                <!-- Story 1 -->
+                <div class="story-card" data-category="gender" onclick="openStory(0)">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Maria Silva">
+                        <div class="story-overlay"></div>
+                        <span class="story-badge story-badge-purple">Igualdade de Gênero</span>
+                        <div class="story-header">
+                            <h3>Maria Silva</h3>
+                            <p>Empreendedora Social</p>
+                        </div>
+                    </div>
+                    <div class="story-preview">
+                        <p>Aos 45 anos, Maria fundou uma ONG que capacita mulheres em situação de vulnerabilidade...</p>
+                        <div class="story-impact">500+ mulheres capacitadas</div>
+                        <button class="story-btn">Ler mais →</button>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="story-card" data-category="mental" onclick="openStory(1)">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Dr. Carlos Mendes">
+                        <div class="story-overlay story-overlay-blue"></div>
+                        <span class="story-badge story-badge-blue">Saúde Mental</span>
+                        <div class="story-header">
+                            <h3>Dr. Carlos Mendes</h3>
+                            <p>Psiquiatra Voluntário</p>
+                        </div>
+                    </div>
+                    <div class="story-preview">
+                        <p>Carlos dedica suas tardes a atender gratuitamente pessoas em comunidades carentes...</p>
+                        <div class="story-impact">2.400 atendimentos/ano</div>
+                        <button class="story-btn">Ler mais →</button>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="story-card" data-category="gender" onclick="openStory(2)">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Ana Costa">
+                        <div class="story-overlay"></div>
+                        <span class="story-badge story-badge-purple">Igualdade de Gênero</span>
+                        <div class="story-header">
+                            <h3>Ana Costa</h3>
+                            <p>Ativista e Sobrevivente</p>
+                        </div>
+                    </div>
+                    <div class="story-preview">
+                        <p>Após superar um relacionamento abusivo, Ana criou uma rede de apoio online...</p>
+                        <div class="story-impact">15.000+ mulheres ajudadas</div>
+                        <button class="story-btn">Ler mais →</button>
+                    </div>
+                </div>
+
+                <!-- Story 4 -->
+                <div class="story-card" data-category="mental" onclick="openStory(3)">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="João Pedro">
+                        <div class="story-overlay story-overlay-blue"></div>
+                        <span class="story-badge story-badge-blue">Saúde Mental</span>
+                        <div class="story-header">
+                            <h3>João Pedro</h3>
+                            <p>Estudante e Ativista</p>
+                        </div>
+                    </div>
+                    <div class="story-preview">
+                        <p>Aos 22 anos, João criou um projeto em sua universidade para combater o estigma...</p>
+                        <div class="story-impact">10.000+ estudantes alcançados</div>
+                        <button class="story-btn">Ler mais →</button>
+                    </div>
+                </div>
+
+                <!-- Story 5 -->
+                <div class="story-card" data-category="gender" onclick="openStory(4)">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Fernanda Oliveira">
+                        <div class="story-overlay"></div>
+                        <span class="story-badge story-badge-purple">Igualdade de Gênero</span>
+                        <div class="story-header">
+                            <h3>Fernanda Oliveira</h3>
+                            <p>CEO e Mentora</p>
+                        </div>
+                    </div>
+                    <div class="story-preview">
+                        <p>Como CEO de uma startup de tecnologia, Fernanda implementou políticas de equidade...</p>
+                        <div class="story-impact">Empresa modelo</div>
+                        <button class="story-btn">Ler mais →</button>
+                    </div>
+                </div>
+
+                <!-- Story 6 -->
+                <div class="story-card" data-category="mental" onclick="openStory(5)">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Luciana Santos">
+                        <div class="story-overlay story-overlay-blue"></div>
+                        <span class="story-badge story-badge-blue">Saúde Mental</span>
+                        <div class="story-header">
+                            <h3>Luciana Santos</h3>
+                            <p>Terapeuta Comunitária</p>
+                        </div>
+                    </div>
+                    <div class="story-preview">
+                        <p>Luciana oferece terapia gratuita em uma comunidade periférica há 10 anos...</p>
+                        <div class="story-impact">1.500 pessoas em terapia</div>
+                        <button class="story-btn">Ler mais →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-card">
+                <div class="cta-icon">💜</div>
+                <h2>Você Também Pode Fazer a Diferença</h2>
+                <p>
+                    Toda grande mudança começa com uma pequena ação. 
+                    Descubra como você pode contribuir para um mundo mais justo e saudável.
+                </p>
+                <a href="acoes.html" class="btn btn-secondary">
+                    Ver Ações Práticas →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="storyModal">
+        <div class="modal-overlay" onclick="closeStory()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeStory()">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="historia.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+/* Actions Page Styles */
+.page-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-icon-large {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-description {
+    color: #4b5563;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Progress Card */
+.progress-card {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.progress-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.progress-content {
+    flex: 1;
+}
+
+.progress-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.progress-bar-full {
+    width: 100%;
+    height: 16px;
+    background: white;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #9333ea 0%, #ec4899 100%);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.progress-content p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Filters */
+.filter-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-btn:hover {
+    border-color: #9333ea;
+    background: rgba(147, 51, 234, 0.05);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+    color: white;
+    border-color: transparent;
+}
+
+/* Actions Grid */
+.actions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.action-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.action-card.completed {
+    background: rgba(16, 185, 129, 0.05);
+    border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.action-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.25rem;
+}
+
+.action-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: #9333ea;
+}
+
+.action-content {
+    flex: 1;
+}
+
+.action-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.action-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.action-card.completed .action-title {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.difficulty-badge {
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.difficulty-easy {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.difficulty-medium {
+    background: rgba(251, 191, 36, 0.1);
+    color: #d97706;
+}
+
+.difficulty-hard {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.action-description {
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.action-card.completed .action-description {
+    text-decoration: line-through;
+}
+
+.action-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.action-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.tag-gender {
+    background: rgba(147, 51, 234, 0.1);
+    color: #9333ea;
+}
+
+.tag-mental {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.tag-impact {
+    color: #6b7280;
+}
+
+/* Motivational Card */
+.motivational-card {
+    background: linear-gradient(135deg, #9333ea 0%, #3b82f6 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.motivational-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.motivational-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.motivational-card p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+}
+
+/* Success Message */
+.success-card {
+    background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #ec4899 100%);
+}
+
+@media (max-width: 768px) {
+    .progress-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
